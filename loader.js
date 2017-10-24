@@ -8,19 +8,12 @@ fs.readFile('inputshort.csv',"utf8", function read(err, data) {
         throw err;
     }
     content = data;
-
-
 });
-
-
-
-// console.log("Processing input file");
 
 var arr =[];
 
-
 var parser = parse({delimiter: ","}, function (err, data) {
-    // note: array element at index 0 contains the row of headers that we should skip
+
     data.forEach(function(record) {
       // create list object out of parsed fields
    var list = {"printedIP" : record[0].slice(0),
